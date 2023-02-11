@@ -30,6 +30,29 @@ function scrollHeader(){
     if(this.scrollY >= 50) header.classList.add('scroll-header'); else header.classList.remove('scroll-header')
 }
 window.addEventListener('scroll', scrollHeader)
+
+// Popular swiper
+let swiperPopular = new Swiper(".popular__container", {
+    lopp:true,
+    spaceBetween: 24,
+    slidePerView:'auto',
+    grabCursor:true,
+
+    pagination: {
+      el: ".swiper-pagination",
+      dynamicBullets: true,
+    },
+    breakpoints: {  
+           768: {
+            slidesPerView: 3,
+            
+            },
+            1024: {
+            
+            spaceBetween: 48,
+            },
+      },
+  });
 // Show scroll up
 function scrollUp(){
     const scrollUp = document.getElementById('scroll-up')
